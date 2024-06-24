@@ -1,0 +1,42 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-primary ;
+    font-family: "Pretendard";
+  }
+}
+
+:root {
+  --background:  #F5F5F5;
+
+  --primary: #333333;
+
+  --secondary: #666666;
+
+  --button: #D84315;
+
+  --informative: #FFA000;
+}
+
+.dark {
+  --background: #181818;
+
+  --primary: #E0E0E0;
+
+  --secondary: #A9A9A9;
+
+  --button: #FF5722:
+
+  --informative: #FFC107;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

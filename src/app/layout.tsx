@@ -1,15 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 
-import "./globals.css";
+import "./tailwindcss.css";
 import Header from "../components/layouts/Header";
 import MainWrapper from "../components/MainWrapper";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
   title: "minsug",
-  description: "misug's blog",
+  description: "minsug's blog",
 };
 
 export default function RootLayout({
@@ -18,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" suppressHydrationWarning>
+      <body>
         <MainWrapper>
           <Header />
           {children}
