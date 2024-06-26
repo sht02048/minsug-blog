@@ -1,10 +1,12 @@
 import Image from "next/image";
-import ThemeSwitch from "../../ThemeSwitch";
+
+import Hamburger from "../../UI/Hamburger";
+import ThemeSwitch from "../../Features/ThemeSwitch";
 
 export default function Header() {
   return (
-    <div className="flex justify-between items-center py-10">
-      <div className="flex items-center">
+    <header className="flex justify-between items-center py-10 mx-4">
+      <a href="/" className="flex items-center cursor-pointer">
         <Image
           priority
           width={40}
@@ -12,13 +14,16 @@ export default function Header() {
           src="/profile.png"
           alt="profile"
         />
-        <div className="ml-2 font-semibold">Minsug</div>
-      </div>
-      <div className="font-medium flex items-center gap-6">
-        <button className="">Tag</button>
-        <button>About</button>
+        <div className="hidden sm:block ml-2 font-semibold">Minsug</div>
+      </a>
+      <div className="font-medium flex items-center space-x-5">
+        <div className="hidden sm:block space-x-5">
+          <button>About</button>
+          <button>Tag</button>
+        </div>
         <ThemeSwitch />
+        <Hamburger />
       </div>
-    </div>
+    </header>
   );
 }
