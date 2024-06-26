@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import "./tailwindcss.css";
+import "../config/tailwind.css";
 import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 import MainWrapper from "../components/Features/MainWrapper";
