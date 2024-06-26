@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 import "./tailwindcss.css";
 import Header from "../components/layouts/Header";
-import MainWrapper from "../components/MainWrapper";
+import Footer from "../components/layouts/Footer";
+import MainWrapper from "../components/Features/MainWrapper";
 
 export const metadata: Metadata = {
   title: "minsug",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <MainWrapper>
           <Header />
           {children}
+          <Footer />
         </MainWrapper>
       </body>
     </html>

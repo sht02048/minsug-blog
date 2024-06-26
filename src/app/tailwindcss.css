@@ -13,25 +13,17 @@
 
 :root {
   --background:  #F5F5F5;
-
   --primary: #333333;
-
   --secondary: #666666;
-
   --button: #D84315;
-
   --informative: #FFA000;
 }
 
 .dark {
   --background: #181818;
-
   --primary: #E0E0E0;
-
   --secondary: #A9A9A9;
-
-  --button: #FF5722:
-
+  --button: #FF5722;
   --informative: #FFC107;
 }
 
