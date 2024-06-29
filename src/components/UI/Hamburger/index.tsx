@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TiBackspaceOutline } from "react-icons/ti";
@@ -26,7 +27,9 @@ export default function Hamburger() {
       >
         <nav className="ml-10 text-2xl">
           <div className="mb-5">Tag</div>
-          <div>About</div>
+          <Link href="/about" onClick={handleClick}>
+            About
+          </Link>
         </nav>
       </div>
     </>

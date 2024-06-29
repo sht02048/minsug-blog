@@ -9,7 +9,9 @@ export default function MainWrapper({
 }: ThemeProviderProps) {
   return (
     <ThemeProvider attribute="class" {...props}>
-      <div className="mx-auto max-w-3xl">{children}</div>
+      <div className="max-w-3xl xl:max-w-5xl mx-auto px-4 sm:px-0 h-screen flex flex-col justify-between">
+        {children}
+      </div>
     </ThemeProvider>
   );
 }

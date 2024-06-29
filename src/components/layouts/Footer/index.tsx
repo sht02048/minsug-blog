@@ -3,7 +3,7 @@ import Icon from "../../UI/Icon";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col items-center mb-10">
+    <footer className="flex flex-col items-center mb-4">
       <Icon href="https://github.com/sht02048">
         <FaGithub className="text-2xl" />
       </Icon>
