@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <>
-      <div className="flex flex-col items-center space-y-4 sm:mr-10 mr-0 mb-4">
+      <div className="flex flex-col items-center space-y-4 sm:mr-10 mr-0 mb-4 mt-10">
         <div className="rounded-full overflow-hidden w-52 h-52 flex items-center justify-center">
           <Image
             src="/avatar.jpeg"
@@ -19,7 +19,7 @@ export default function About() {
           <div>Seoul, Korea</div>
         </div>
       </div>
-      <div className="space-y-4 mt-4">
+      <div className="space-y-4 mt-14">
         <p>안녕하세요! 자바스크립트를 좋아하는 채민석이라고 합니다.</p>
         <p className="break-keep">
           문제를 정의하고 해결하는 것에 관심이 많습니다. 작동 원리를 깊게
