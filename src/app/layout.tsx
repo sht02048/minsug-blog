@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
 import "../config/tailwind.css";
-import Header from "../components/layouts/Header";
-import Footer from "../components/layouts/Footer";
 import MainWrapper from "../components/Features/MainWrapper";
 
 export const metadata: Metadata = {
@@ -18,11 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <MainWrapper>
-          <Header />
-          {children}
-          <Footer />
-        </MainWrapper>
+        <MainWrapper>{children}</MainWrapper>
       </body>
     </html>
   );
