@@ -10,6 +10,7 @@ export interface PostInfo {
   slug: string;
   frontMatter: FrontMatter;
   content: string;
+  parsedReadingTime: number;
 }
 
 export interface TagInfo {

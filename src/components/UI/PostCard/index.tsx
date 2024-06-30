@@ -5,8 +5,10 @@ import PublishedDate from "../../Features/PublishedDate";
 
 export default function PostCard({
   frontMatter,
+  readingTime,
 }: {
   frontMatter: FrontMatter;
+  readingTime: number;
 }) {
   const { title, tags, date, description } = frontMatter;
 
@@ -16,6 +18,7 @@ export default function PostCard({
       <div className="text-secondary sm:text-lg">{description}</div>
       <div className="sm:flex sm:space-x-6 items-center sm:text-lg text-secondary">
         <PublishedDate date={date} />
+        <span>{`${readingTime} min read`}</span>
         <div className="flex space-x-4">
           {tags.map((tag) => (
             <Tag tagName={tag} key={tag} />
