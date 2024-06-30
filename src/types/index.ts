@@ -5,3 +5,13 @@ export interface FrontMatter {
   date: Date;
   description: string;
 }
+
+export interface PostInfo {
+  slug: string;
+  frontMatter: FrontMatter;
+  content: string;
+}
+
+export interface TagInfo {
+  [key: string]: number;
+}

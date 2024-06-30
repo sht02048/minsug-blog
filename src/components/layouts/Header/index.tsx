@@ -20,7 +20,7 @@ export default function Header() {
       <div className="font-medium flex items-center space-x-5">
         <div className="hidden sm:block space-x-5">
           <Link href="/about">About</Link>
-          <button>Tag</button>
+          <Link href="/tags">Tags</Link>
         </div>
         <ThemeSwitch />
         <Hamburger />

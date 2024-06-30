@@ -3,12 +3,12 @@ import path from "path";
 import { sync } from "glob";
 import matter from "gray-matter";
 
-import { FrontMatter } from "../types";
+import { FrontMatter, PostInfo } from "../types";
 
 const BASE_PATH = "/posts";
 const POSTS_PATH = path.join(process.cwd(), BASE_PATH);
 
-export default function getAllPost() {
+export default function getAllPost(): PostInfo[] {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.mdx`);
   const postSlugList = postPaths.map((path) => {
     const { data, content } = parseFrontMatter(path);
