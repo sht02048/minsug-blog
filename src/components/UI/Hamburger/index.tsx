@@ -25,8 +25,8 @@ export default function Hamburger() {
       <div
         className={`fixed top-24 right-0 z-10 h-full w-full transform opacity-95 duration-300 ease-in-out bg-background ${shouldShowNav ? "translate-x-0" : "translate-x-full"}`}
       >
-        <nav className="ml-10 text-2xl">
-          <Link href="/tags" className="mb-5">
+        <nav className="ml-10 text-2xl flex flex-col">
+          <Link href="/tags" className="mb-5" onClick={handleClick}>
             Tags
           </Link>
           <Link href="/about" onClick={handleClick}>
