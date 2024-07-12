@@ -1,12 +1,4 @@
-"use client";
-
-import { usePathname } from "next/navigation";
-import getPageTitle from "@/src/lib/getPageTitle";
-
-export default function PageTitle() {
-  const pathName = usePathname();
-  const pageTitle = getPageTitle(pathName);
-
+export default function PageTitle({ pageTitle }: { pageTitle: string }) {
   return (
     <div className="border-b border-primary">
       <div className="space-y-2 pt-6 pb-8 md:space-y-5">

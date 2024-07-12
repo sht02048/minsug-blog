@@ -1,7 +1,10 @@
 "use client";
 
 import { ThemeProvider } from "next-themes";
+import { usePathname } from "next/navigation";
 import { type ThemeProviderProps } from "next-themes/dist/types";
+
+import getPageTitle from "@/src/lib/getPageTitle";
 
 import Header from "../../layouts/Header";
 import Footer from "../../layouts/Footer";
@@ -11,12 +14,16 @@ export default function MainWrapper({
   children,
   ...props
 }: ThemeProviderProps) {
+  const pathName = usePathname();
+  const pageTitle = getPageTitle(pathName);
+  const isPost = pathName.includes("post");
+
   return (
     <ThemeProvider attribute="class" {...props}>
       <div className="max-w-3xl xl:max-w-5xl mx-auto px-4 sm:px-0 h-screen flex flex-col justify-between">
         <div className="mb-auto">
           <Header />
-          <PageTitle />
+          {!isPost && <PageTitle pageTitle={pageTitle} />}
           <div className="flex flex-col sm:flex-row">{children}</div>
         </div>
         <Footer />
