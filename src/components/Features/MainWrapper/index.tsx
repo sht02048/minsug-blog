@@ -16,7 +16,7 @@ export default function MainWrapper({
 }: ThemeProviderProps) {
   const pathName = usePathname();
   const pageTitle = getPageTitle(pathName);
-  const isPost = pathName.includes("post");
+  const isPost = pathName.split("/").length > 3;
 
   return (
     <ThemeProvider attribute="class" {...props}>

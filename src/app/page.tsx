@@ -10,6 +10,7 @@ export default function Posts() {
         <PostCard
           frontMatter={post.frontMatter}
           readingTime={post.parsedReadingTime}
+          slug={post.slug}
           key={post.frontMatter.title}
         />
       ))}
