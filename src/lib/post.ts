@@ -39,14 +39,8 @@ export function getPostDetail(postPath: string) {
   return { data, content, parsedReadingTime };
 }
 
-export function translateToPostPath({
-  year,
-  month,
-  slug,
-}: {
-  year: string;
-  month: string;
-  slug: string;
-}) {
-  return POSTS_PATH + "/" + year + "/" + month + "/" + slug + ".mdx";
+export function findPostByYearAndSlug(year: string, slug: string[]) {
+  const slugs = "/" + [year, ...slug].join("/");
+  const posts = getAllPost();
+  return posts.find((post) => post.slug === slugs);
 }

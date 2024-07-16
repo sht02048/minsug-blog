@@ -16,7 +16,8 @@ export default function PostCard({
   const { title, tags, date, description } = frontMatter;
 
   const year = date.getFullYear();
-  const month = date.getMonth();
+  const month = `${date.getMonth() + 1}`.padStart(2, "0");
+
   const englishTitle = slug.split("/")[3];
 
   return (
