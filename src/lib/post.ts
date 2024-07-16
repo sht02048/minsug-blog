@@ -1,21 +1,17 @@
 import fs from "fs";
-import path from "path";
 import dayjs from "dayjs";
 import { sync } from "glob";
 import matter from "gray-matter";
 import readingTime from "reading-time";
+import { BASE_PATH, POSTS_PATH } from "../constants";
 
 import { FrontMatter, PostInfo } from "../types";
 
-const BASE_PATH = "/posts";
-const POSTS_PATH = path.join(process.cwd(), BASE_PATH);
-
-export default function getAllPost(): PostInfo[] {
+export function getAllPost(): PostInfo[] {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.mdx`);
   const postSlugList = postPaths
     .map((path) => {
-      const { data, content } = parseFrontMatter(path);
-      const parsedReadingTime = Math.ceil(readingTime(content).minutes);
+      const { data, content, parsedReadingTime } = getPostDetail(path);
 
       return {
         slug: path
@@ -35,9 +31,22 @@ export default function getAllPost(): PostInfo[] {
   return postSlugList;
 }
 
-function parseFrontMatter(postPath: string) {
+export function getPostDetail(postPath: string) {
   const post = fs.readFileSync(postPath, "utf-8");
   const { data, content } = matter(post);
+  const parsedReadingTime = Math.ceil(readingTime(content).minutes);
 
-  return { data, content };
+  return { data, content, parsedReadingTime };
+}
+
+export function translateToPostPath({
+  year,
+  month,
+  slug,
+}: {
+  year: string;
+  month: string;
+  slug: string;
+}) {
+  return POSTS_PATH + "/" + year + "/" + month + "/" + slug + ".mdx";
 }
