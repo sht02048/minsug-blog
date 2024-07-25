@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
-import PostBody from "@/ui/PostBody";
+import PostBody from "@/src/components/ui/PostBody";
 import { findPostByYearAndSlug } from "@/src/lib/post";
-import PostHeader from "@/ui/PostHeader";
+import PostHeader from "@/src/components/ui/PostHeader";
 
 export default function Page({
   params: { year, slug },

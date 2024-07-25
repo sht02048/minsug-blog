@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Hamburger from "../../../../ui/Hamburger";
-import ThemeSwitch from "../../../../features/ThemeSwitch";
+import Hamburger from "../../ui/Hamburger";
+import ThemeSwitch from "../../features/ThemeSwitch";
 
 export default function Header() {
   return (
