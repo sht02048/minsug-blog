@@ -21,7 +21,7 @@ export default function PostCard({
   const englishTitle = slug.split("/")[3];
 
   return (
-    <div className="space-y-6 py-10">
+    <div className="space-y-6 py-4 sm:py-10 sm:space-y-10">
       <Link
         href={`/${year}/${month}/${englishTitle}`}
         className="sm:text-2xl text-xl"

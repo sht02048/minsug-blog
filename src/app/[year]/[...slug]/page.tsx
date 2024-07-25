@@ -16,7 +16,7 @@ export default function Page({
   }
 
   return (
-    <div className="w-full">
+    <div className="w-full space-y-10">
       <PostHeader
         title={post.frontMatter.title}
         date={post.frontMatter.date}
