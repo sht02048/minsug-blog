@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FrontMatter } from "@/src/types";
 
 import Tag from "../Tag";
-import PublishedDate from "../../Features/PublishedDate";
+import PublishedDate from "../PublishedDate";
 
 export default function PostCard({
   frontMatter,

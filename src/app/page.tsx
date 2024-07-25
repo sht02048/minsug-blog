@@ -1,5 +1,5 @@
 import { getAllPost } from "../lib/post";
-import PostCard from "../components/UI/PostCard";
+import PostCard from "../components/ui/PostCard";
 
 export default function Posts() {
   const posts = getAllPost();

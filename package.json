@@ -9,7 +9,8 @@
     "lint": "next lint",
     "prepare": "husky",
     "prettier": "prettier '**/*.{json,md,ts,tsx}' --check",
-    "prettier:fix": "prettier '**/*.{json,md,ts,tsx}' --write"
+    "prettier:fix": "prettier '**/*.{json,md,ts,tsx}' --write",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.13",

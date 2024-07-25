@@ -1,7 +1,7 @@
 import { IoMdTime } from "react-icons/io";
 import { MdOutlineDateRange } from "react-icons/md";
 
-import PublishedDate from "../../Features/PublishedDate";
+import PublishedDate from "../PublishedDate";
 
 export default function PostHeader({
   title,

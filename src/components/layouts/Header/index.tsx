@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import Hamburger from "../../UI/Hamburger";
+import Hamburger from "../../ui/Hamburger";
 import ThemeSwitch from "../../Features/ThemeSwitch";
 
 export default function Header() {

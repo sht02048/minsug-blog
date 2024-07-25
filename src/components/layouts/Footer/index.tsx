@@ -1,6 +1,7 @@
-import { FaGithub } from "react-icons/fa6";
-import Icon from "../../UI/Icon";
 import Link from "next/link";
+import { FaGithub } from "react-icons/fa6";
+
+import Icon from "../../ui/Icon";
 
 export default function Footer() {
   return (

@@ -6,9 +6,9 @@ import { type ThemeProviderProps } from "next-themes/dist/types";
 
 import getPageTitle from "@/src/lib/getPageTitle";
 
-import Header from "../../layouts/Header";
-import Footer from "../../layouts/Footer";
-import PageTitle from "../../layouts/PageTitle";
+import Header from "../Header";
+import Footer from "../Footer";
+import PageTitle from "../PageTitle";
 
 export default function MainWrapper({
   children,

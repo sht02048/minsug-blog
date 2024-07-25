@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "../config/tailwind.css";
-import MainWrapper from "../components/Features/MainWrapper";
+import MainWrapper from "../components/layouts/MainWrapper";
 
 export const metadata: Metadata = {
   title: "minsug",

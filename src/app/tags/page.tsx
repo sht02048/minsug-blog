@@ -1,6 +1,6 @@
 import sortTags from "@/src/lib/sortTags";
 import { getAllPost } from "@/src/lib/post";
-import TagInfo from "@/src/components/UI/TagInfo";
+import TagInfo from "@/src/components/ui/TagInfo";
 
 export default function Tags() {
   const posts = getAllPost();
