@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 
-import { PostInfo } from "@/src/types";
+import { PostInfo } from "@/src/config/types";
 import getSlug from "@/src/lib/getSlug";
 import PostBody from "@/src/components/ui/PostBody";
 import PostHeader from "@/src/components/ui/PostHeader";

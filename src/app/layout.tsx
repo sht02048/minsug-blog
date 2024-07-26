@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import "../config/tailwind.css";
+import "../config/css/tailwind.css";
 import MainWrapper from "../components/layouts/MainWrapper";
 
 export const metadata: Metadata = {

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { CgDarkMode } from "react-icons/cg";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
-import { Theme } from "@/src/constants";
+import { Theme } from "@/src/config/constants";
 
 export default function ThemeToggle() {
   const [isMounted, setIsMounted] = useState(false);

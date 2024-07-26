@@ -3,9 +3,9 @@ import dayjs from "dayjs";
 import { sync } from "glob";
 import matter from "gray-matter";
 import readingTime from "reading-time";
-import { BASE_PATH, POSTS_PATH } from "../constants";
+import { BASE_PATH, POSTS_PATH } from "../config/constants";
 
-import { FrontMatter, PostInfo, Heading } from "../types";
+import { FrontMatter, PostInfo, Heading } from "../config/types";
 
 export function getAllPost(): PostInfo[] {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.mdx`);

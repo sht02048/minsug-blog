@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { FrontMatter } from "@/src/types";
+import { FrontMatter } from "@/src/config/types";
 import getSlug from "@/src/lib/getSlug";
 
 import Tag from "../Tag";

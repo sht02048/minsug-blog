@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-import { Heading } from "@/src/types";
+import { Heading } from "@/src/config/types";
 import getFirstHighlight from "@/src/lib/getFirstHighlight";
 import useHeadingsObserver from "@/src/hooks/useHeadingObserver";
 

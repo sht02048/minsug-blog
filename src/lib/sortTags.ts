@@ -1,4 +1,4 @@
-import { PostInfo, TagInfo } from "../types";
+import { PostInfo, TagInfo } from "../config/types";
 
 export default function sortTags(posts: PostInfo[]): TagInfo {
   const tagInfo: TagInfo = {};

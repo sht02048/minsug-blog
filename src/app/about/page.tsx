@@ -1,17 +1,12 @@
 import Image from "next/image";
+import avatar from "../../../public/avatar.jpeg";
 
 export default function About() {
   return (
     <>
       <div className="flex flex-col items-center space-y-4 sm:mr-10 mr-0 mb-4 mt-10">
         <div className="rounded-full overflow-hidden w-52 h-52 flex items-center justify-center">
-          <Image
-            src="/avatar.jpeg"
-            alt="avatar"
-            width={500}
-            height={500}
-            priority
-          />
+          <Image src={avatar} alt="picture of the blog owner" priority />
         </div>
         <div className="text-center space-y-2 text-secondary">
           <div className="text-2xl font-semibold text-primary">채민석</div>

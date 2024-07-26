@@ -1,4 +1,4 @@
-import { Heading } from "../types";
+import { Heading } from "../config/types";
 
 interface Props {
   headings: Heading[];

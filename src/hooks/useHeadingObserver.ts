@@ -35,7 +35,5 @@ export default function useHeadingsObserver(query: string) {
     return () => observer.current?.disconnect();
   }, [query]);
 
-  console.log(tempId);
-
   return { activeIdList, tempId };
 }
