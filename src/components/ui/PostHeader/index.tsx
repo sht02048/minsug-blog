@@ -14,7 +14,7 @@ export default function PostHeader({
 }) {
   return (
     <section className="flex items-center flex-col space-y-4">
-      <h1 className="text-3xl font-bold">{title}</h1>
+      <span className="text-3xl font-bold">{title}</span>
       <div className="flex space-x-6">
         <div className="flex items-center">
           <MdOutlineDateRange />

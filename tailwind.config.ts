@@ -17,6 +17,15 @@ const config: Config = {
       },
     },
   },
+  typography: {
+    DEFAULT: {
+      css: {
+        'h2, h3, h4': {
+          scrollMarginTop: '5rem',
+        },
+      }
+    }
+  },
   plugins: [require("@tailwindcss/typography")],
 };
 

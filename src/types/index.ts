@@ -16,3 +16,9 @@ export interface PostInfo {
 export interface TagInfo {
   [key: string]: number;
 }
+
+export interface Heading {
+  text: string;
+  link: string;
+  headingType: string;
+}

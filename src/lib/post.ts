@@ -5,7 +5,7 @@ import matter from "gray-matter";
 import readingTime from "reading-time";
 import { BASE_PATH, POSTS_PATH } from "../constants";
 
-import { FrontMatter, PostInfo } from "../types";
+import { FrontMatter, PostInfo, Heading } from "../types";
 
 export function getAllPost(): PostInfo[] {
   const postPaths: string[] = sync(`${POSTS_PATH}/**/*.mdx`);
@@ -43,4 +43,24 @@ export function findPostByYearAndSlug(year: string, slug: string[]) {
   const slugs = "/" + [year, ...slug].join("/");
   const posts = getAllPost();
   return posts.find((post) => post.slug === slugs);
+}
+
+export function parseHeading(content: string): Heading[] {
+  const regex = /^(#{1,3}) (.*)$/gim;
+  const headingList = content.match(regex)?.map((heading: string) => {
+    const text = heading.replace(/#{1,3} /, "").trim();
+    const link =
+      "#" +
+      text
+        .replace(/[\[\]:!@#$/%^&*()+=,.?]/g, "")
+        .replace(/\s+/g, "-")
+        .toLowerCase();
+
+    const indent = (heading.match(/#/g)?.length || 1) - 1;
+    const headingType = indent === 0 ? "h1" : indent === 1 ? "h2" : "h3";
+
+    return { text, link, headingType };
+  });
+
+  return headingList || [];
 }
