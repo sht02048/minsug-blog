@@ -27,10 +27,10 @@ export default function PostCard({
         {title}
       </Link>
       <div className="text-secondary sm:text-lg">{description}</div>
-      <div className="sm:flex sm:space-x-6 items-center text-secondary">
+      <div className="items-center text-secondary sm:flex sm:space-x-6">
         <PublishedDate date={date} />
-        <span>{`${readingTime} min read`}</span>
-        <div className="flex space-x-4">
+        <span className="ml-2 sm:ml-0">{`${readingTime} min read`}</span>
+        <div className="flex space-x-4 mt-2 sm:mt-0">
           {tags.map((tag) => (
             <Tag tagName={tag} key={tag} />
           ))}
