@@ -19,7 +19,7 @@ export default function SideTableOfContents({
   });
 
   return (
-    <div className="absolute -right-16 h-full top-0 hidden xl:block">
+    <div className="absolute -right-44 h-full top-0 hidden xl:block w-64">
       <div className=" sticky top-1/3 border-l">
         <div className="ml-4">
           <div className="mb-2 font-bold">목차</div>
