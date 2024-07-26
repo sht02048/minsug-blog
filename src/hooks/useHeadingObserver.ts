@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function useHeadingsObserver(query: string) {
   const observer = useRef<IntersectionObserver>();
   const [activeIdList, setActiveIdList] = useState<string[]>([]);
+  const [tempId, setTempId] = useState("");
 
   useEffect(() => {
     const scrollMarginOption = { rootMargin: "-32px 0px -80px 0px" };
@@ -13,8 +14,10 @@ export default function useHeadingsObserver(query: string) {
 
         if (entry.isIntersecting) {
           setActiveIdList((prev) => [...prev, targetId]);
+          setTempId(() => "");
         } else {
           setActiveIdList((prev) => {
+            if (prev.length === 1) setTempId(targetId);
             return prev.filter((elem) => elem !== targetId);
           });
         }
@@ -32,5 +35,7 @@ export default function useHeadingsObserver(query: string) {
     return () => observer.current?.disconnect();
   }, [query]);
 
-  return activeIdList;
+  console.log(tempId);
+
+  return { activeIdList, tempId };
 }

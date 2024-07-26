@@ -12,11 +12,13 @@ export default function SideTableOfContents({
 }: {
   headings: Heading[];
 }) {
-  const highlightedHeadings = useHeadingsObserver("h1, h2, h3");
-  const currentHighlightHeading = getFirstHighlight({
-    headings,
-    highlightedHeadings,
-  });
+  const { activeIdList, tempId } = useHeadingsObserver("h1, h2, h3");
+  const currentHighlightHeading =
+    tempId ||
+    getFirstHighlight({
+      headings,
+      highlightedHeadings: activeIdList,
+    });
 
   return (
     <div className="absolute -right-44 h-full top-0 hidden xl:block w-64">
