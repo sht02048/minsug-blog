@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import { FrontMatter } from "@/src/types";
+import getSlug from "@/src/lib/getSlug";
 
 import Tag from "../Tag";
 import PublishedDate from "../PublishedDate";
@@ -14,11 +16,7 @@ export default function PostCard({
   slug: string;
 }) {
   const { title, tags, date, description } = frontMatter;
-
-  const year = date.getFullYear();
-  const month = `${date.getMonth() + 1}`.padStart(2, "0");
-
-  const englishTitle = slug.split("/")[3];
+  const { year, month, englishTitle } = getSlug({ date, slug });
 
   return (
     <div className="space-y-6 py-4 sm:py-10 sm:space-y-10">

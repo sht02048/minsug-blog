@@ -42,6 +42,7 @@ export function getPostDetail(postPath: string) {
 export function findPostByYearAndSlug(year: string, slug: string[]) {
   const slugs = "/" + [year, ...slug].join("/");
   const posts = getAllPost();
+
   return posts.find((post) => post.slug === slugs);
 }
 
