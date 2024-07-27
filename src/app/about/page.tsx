@@ -1,5 +1,25 @@
 import Image from "next/image";
+import { Metadata } from "next";
+
+import siteConfig from "@/src/config/siteConfig";
+
 import avatar from "../../../public/avatar.jpeg";
+
+export function generateMetaData(): Metadata {
+  const pageTitle = "about";
+  const url = `${siteConfig.url}${siteConfig.path.about()}`;
+  const imageUrl = "/avatar.jpeg";
+
+  return {
+    title: pageTitle,
+    openGraph: {
+      title: pageTitle,
+      url,
+      images: imageUrl,
+      type: "profile",
+    },
+  };
+}
 
 export default function Page() {
   return (

@@ -1,7 +1,24 @@
+import { Metadata } from "next";
+
 import sortTags from "@/src/lib/sortTags";
 import { getAllPost } from "@/src/lib/post";
+import siteConfig from "@/src/config/siteConfig";
 import TagInfo from "@/src/components/Tags/TagInfo";
 import PageTitle from "@/src/components/layouts/PageTitle";
+
+export function generateMetaData(): Metadata {
+  const pageTitle = "tag";
+  const url = `${siteConfig.url}${siteConfig.path.tags()}`;
+
+  return {
+    title: pageTitle,
+    openGraph: {
+      title: pageTitle,
+      url,
+      publishedTime: new Date().toISOString(),
+    },
+  };
+}
 
 export default function Page() {
   const posts = getAllPost();
