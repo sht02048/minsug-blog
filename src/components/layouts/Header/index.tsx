@@ -10,7 +10,10 @@ import ThemeSwitch from "../../features/ThemeSwitch";
 export default function Header() {
   return (
     <header className="flex justify-between items-center py-10">
-      <Link href="/" className="flex items-center cursor-pointer">
+      <Link
+        href={siteConfig.path.home()}
+        className="flex items-center cursor-pointer"
+      >
         <Image
           priority
           width={40}
@@ -24,8 +27,8 @@ export default function Header() {
       </Link>
       <div className="font-medium flex items-center space-x-5">
         <div className="hidden sm:block space-x-5">
-          <Link href="/about">About</Link>
-          <Link href="/tags">Tags</Link>
+          <Link href={siteConfig.path.about()}>About</Link>
+          <Link href={siteConfig.path.tags()}>Tags</Link>
         </div>
         <ThemeSwitch />
         <Hamburger />

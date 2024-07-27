@@ -1,7 +1,8 @@
 import Link from "next/link";
 
-import { FrontMatter } from "@/src/config/types";
 import getSlug from "@/src/lib/getSlug";
+import siteConfig from "@/src/config/siteConfig";
+import { FrontMatter } from "@/src/config/types";
 
 import Tag from "../Tag";
 import PublishedDate from "../PublishedDate";
@@ -21,7 +22,7 @@ export default function PostCard({
   return (
     <div className="space-y-6 py-4 sm:py-10 sm:space-y-10">
       <Link
-        href={`/${year}/${month}/${englishTitle}`}
+        href={siteConfig.path.post({ year, month, englishTitle })}
         className="sm:text-2xl text-xl"
       >
         {title}

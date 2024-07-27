@@ -1,8 +1,8 @@
 const siteConfig = {
+  title: "minsug",
+  description: "minsug의 기술 블로그",
   url: "https://blog.minsug.dev",
   pathPrefix: "/",
-  title: "minsug",
-  subTitle: "minsug",
   copyright: "minsug © All rights reserved.",
   author: {
     name: "minsug",
@@ -11,6 +11,29 @@ const siteConfig = {
     contacts: {
       email: "sht02048@gmail.com",
       github: "https://github.com/sht02048",
+    },
+  },
+  path: {
+    root: "/",
+    home() {
+      return this.root;
+    },
+    about() {
+      return this.root.concat("about/");
+    },
+    tags() {
+      return this.root.concat("tags/");
+    },
+    post({
+      year,
+      month,
+      englishTitle,
+    }: {
+      year: string;
+      month: string;
+      englishTitle: string;
+    }) {
+      return this.root.concat(`${year}/${month}/${englishTitle}`);
     },
   },
 };
