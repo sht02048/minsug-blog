@@ -7,7 +7,7 @@ export default function Page() {
 
   return (
     <div className="mb-auto divide-y-[0.5px] w-full divide-secondary">
-      <PageTitle pageTitle="Posts" />
+      <PageTitle pageTitle="posts" />
       {posts.map((post) => (
         <PostCard
           frontMatter={post.frontMatter}

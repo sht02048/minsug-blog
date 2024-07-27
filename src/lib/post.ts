@@ -65,3 +65,12 @@ export function parseHeading(content: string): Heading[] {
 
   return headingList || [];
 }
+
+export function getPostByTags(tag: string): PostInfo[] {
+  const allPosts = getAllPost();
+  const postByTags = allPosts.filter((post) =>
+    post.frontMatter.tags.includes(tag),
+  );
+
+  return postByTags;
+}

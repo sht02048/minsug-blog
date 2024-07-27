@@ -36,6 +36,9 @@ const siteConfig = {
     }) {
       return this.root.concat(`${year}/${month}/${englishTitle}`);
     },
+    postByTags(tag: string) {
+      return this.tags().concat(tag);
+    },
   },
 };
 
