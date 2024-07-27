@@ -27,7 +27,8 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
