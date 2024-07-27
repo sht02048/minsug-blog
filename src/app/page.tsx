@@ -1,8 +1,8 @@
 import { getAllPost } from "../lib/post";
-import PostCard from "../components/ui/PostCard";
+import PostCard from "../components/Posts/PostCard";
 import PageTitle from "../components/layouts/PageTitle";
 
-export default function Posts() {
+export default function Page() {
   const posts = getAllPost();
 
   return (

@@ -1,12 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import getSlug from "@/src/lib/getSlug";
 import siteConfig from "@/src/config/siteConfig";
 import { FrontMatter } from "@/src/config/types";
 
-import Tag from "../Tag";
-import PublishedDate from "../PublishedDate";
-import Image from "next/image";
+import Tag from "../../Tags/Tag";
+import PublishedDate from "../../ui/PublishedDate";
 
 export default function PostCard({
   frontMatter,

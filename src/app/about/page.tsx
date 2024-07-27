@@ -1,7 +1,7 @@
 import Image from "next/image";
 import avatar from "../../../public/avatar.jpeg";
 
-export default function About() {
+export default function Page() {
   return (
     <>
       <div className="flex flex-col items-center space-y-4 sm:mr-10 mr-0 mb-4 mt-10">

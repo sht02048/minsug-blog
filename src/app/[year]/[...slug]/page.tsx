@@ -9,8 +9,8 @@ import {
 import getSlug from "@/src/lib/getSlug";
 import { PostInfo } from "@/src/config/types";
 import siteConfig from "@/src/config/siteConfig";
-import PostBody from "@/src/components/ui/PostBody";
-import PostHeader from "@/src/components/ui/PostHeader";
+import PostBody from "@/src/components/Posts/PostBody";
+import PostHeader from "@/src/components/Posts/PostHeader";
 import SideTableOfContents from "@/src/components/features/SideTableOfContents";
 
 interface Props {
