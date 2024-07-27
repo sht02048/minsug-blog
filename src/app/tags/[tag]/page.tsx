@@ -25,7 +25,7 @@ export function generateMetadata({
   };
 }
 
-export function generateStaticProps() {
+export function generateStaticParams() {
   const posts = getAllPost();
   const tagsSet = new Set();
   const tagList: { tag: string }[] = [];
