@@ -43,6 +43,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <meta
+        name="naver-site-verification"
+        content="84e0ca3f5976ec29f5e6867794a80740841e222c"
+      />
+      <meta
+        name="google-site-verification"
+        content="VKHRLhFEBmBAiNzdQxzKhsuuJcK8egUKTA4s6LKxERg"
+      />
       <body>
         <MainWrapper>{children}</MainWrapper>
         <Analytics />
