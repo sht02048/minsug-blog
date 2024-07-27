@@ -74,6 +74,7 @@ export default function Page({ params: { year, slug } }: { params: Props }) {
     <div className="w-full space-y-10 relative">
       <PostHeader
         title={post.frontMatter.title}
+        description={post.frontMatter.description}
         date={post.frontMatter.date}
         parsedReadingTime={post.parsedReadingTime}
       />
