@@ -7,19 +7,14 @@ import siteConfig from "@/src/config/siteConfig";
 import TagInfo from "@/src/components/Tags/TagInfo";
 import PageTitle from "@/src/components/layouts/PageTitle";
 
-export function generateMetaData(): Metadata {
-  const pageTitle = "tag";
-  const url = `${siteConfig.url}${pathKeys.tags()}`;
-
-  return {
-    title: pageTitle,
-    openGraph: {
-      title: pageTitle,
-      url,
-      publishedTime: new Date().toISOString(),
-    },
-  };
-}
+export const metadata: Metadata = {
+  title: "tag",
+  openGraph: {
+    title: "tag",
+    url: `${siteConfig.url}${pathKeys.tags()}`,
+    publishedTime: new Date().toISOString(),
+  },
+};
 
 export default function Page() {
   const posts = getAllPost();
