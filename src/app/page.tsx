@@ -1,11 +1,13 @@
 import { getAllPost } from "../lib/post";
 import PostCard from "../components/ui/PostCard";
+import PageTitle from "../components/layouts/PageTitle";
 
 export default function Posts() {
   const posts = getAllPost();
 
   return (
     <div className="mb-auto divide-y-[0.5px] w-full divide-secondary">
+      <PageTitle pageTitle="Posts" />
       {posts.map((post) => (
         <PostCard
           frontMatter={post.frontMatter}
