@@ -4,6 +4,7 @@ export interface FrontMatter {
   published: boolean;
   date: Date;
   description: string;
+  thumbnail: string;
 }
 
 export interface PostInfo {

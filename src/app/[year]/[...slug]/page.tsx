@@ -30,8 +30,9 @@ export function generateMetadata({
   }
 
   const { frontMatter } = post;
-  const { title, tags, description, date } = frontMatter;
+  const { title, tags, description, date, thumbnail } = frontMatter;
   const url = `${siteConfig.url}/${year}/${slug[0]}/${slug[1]}`;
+  const imageUrl = `${siteConfig.url}/${thumbnail}`;
 
   return {
     title,
@@ -43,6 +44,7 @@ export function generateMetadata({
       url,
       type: "article",
       publishedTime: date.toISOString(),
+      images: imageUrl,
     },
   };
 }
