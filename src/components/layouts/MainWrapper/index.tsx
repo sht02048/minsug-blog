@@ -19,7 +19,7 @@ export default function MainWrapper({
   const isPost = pathName.split("/").length > 3;
 
   return (
-    <ThemeProvider attribute="class" {...props}>
+    <ThemeProvider attribute="class" {...props} defaultTheme="dark">
       <div className="max-w-3xl xl:max-w-5xl mx-auto px-4 sm:px-0 h-screen flex flex-col justify-between">
         <div className="mb-auto">
           <Header />
