@@ -4,6 +4,7 @@ const siteConfig = {
   url: "https://blog.minsug.dev",
   pathPrefix: "/",
   copyright: "minsug © All rights reserved.",
+  keyword: ["javascript", "typescript", "react", "nextJS", "frontEnd"],
   author: {
     name: "minsug",
     photo: "/profile.png",

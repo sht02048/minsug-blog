@@ -1,19 +1,50 @@
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { PostInfo } from "@/src/config/types";
-import getSlug from "@/src/lib/getSlug";
-import PostBody from "@/src/components/ui/PostBody";
-import PostHeader from "@/src/components/ui/PostHeader";
 import {
   findPostByYearAndSlug,
   getAllPost,
   parseHeading,
 } from "@/src/lib/post";
+import getSlug from "@/src/lib/getSlug";
+import { PostInfo } from "@/src/config/types";
+import siteConfig from "@/src/config/siteConfig";
+import PostBody from "@/src/components/ui/PostBody";
+import PostHeader from "@/src/components/ui/PostHeader";
 import SideTableOfContents from "@/src/components/features/SideTableOfContents";
 
 interface Props {
   year: string;
   slug: string[];
+}
+
+export function generateMetadata({
+  params: { year, slug },
+}: {
+  params: Props;
+}): Metadata {
+  const post = findPostByYearAndSlug(year, slug);
+
+  if (!post) {
+    return {};
+  }
+
+  const { frontMatter } = post;
+  const { title, tags, description, date } = frontMatter;
+  const url = `${siteConfig.url}/${year}/${slug[0]}/${slug[1]}`;
+
+  return {
+    title,
+    description,
+    keywords: tags,
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      publishedTime: date.toISOString(),
+    },
+  };
 }
 
 export function generateStaticParams() {
