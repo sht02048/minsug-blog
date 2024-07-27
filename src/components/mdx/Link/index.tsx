@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import Link from "../../ui/Link";
 
-export default function ExternalLink({
+export default function MdxLink({
   href,
   children,
 }: {

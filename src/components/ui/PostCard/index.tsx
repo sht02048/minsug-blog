@@ -40,13 +40,12 @@ export default function PostCard({
           </div>
         </div>
       </div>
-      <div className="w-80 h-44 bg-white sm:block hidden">
+      <div className="w-80 h-44 bg-white sm:block hidden relative">
         <Link href={siteConfig.path.post({ year, month, englishTitle })}>
           <Image
             src={thumbnail}
             alt="thumbnail"
-            width={300}
-            height={300}
+            fill
             className="w-full h-full object-cover"
           />
         </Link>

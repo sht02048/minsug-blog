@@ -5,12 +5,12 @@ import { MDXComponents } from "mdx/types";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 
-import Image from "../../mdx/Image";
-import ExternalLink from "../../mdx/Link";
+import MdxImage from "../../mdx/Image";
+import MdxLink from "../../mdx/Link";
 
 const mdxComponents: MDXComponents = {
-  a: ExternalLink as any,
-  img: Image as any,
+  a: MdxLink as any,
+  img: MdxImage as any,
 };
 
 export default function PostBody({ content }: { content: string }) {
