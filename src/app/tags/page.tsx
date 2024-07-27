@@ -8,11 +8,12 @@ import TagInfo from "@/src/components/Tags/TagInfo";
 import PageTitle from "@/src/components/layouts/PageTitle";
 
 export const metadata: Metadata = {
-  title: "tag",
+  title: "tags",
   openGraph: {
-    title: "tag",
+    title: "tags",
     url: `${siteConfig.url}${pathKeys.tags()}`,
     publishedTime: new Date().toISOString(),
+    images: `${siteConfig.url}/profile.png`,
   },
 };
 
