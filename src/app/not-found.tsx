@@ -1,5 +1,5 @@
 import Link from "next/link";
-import siteConfig from "../config/siteConfig";
+import pathKeys from "../config/pathKeys";
 
 export default function NotFound() {
   return (
@@ -9,10 +9,7 @@ export default function NotFound() {
       <p className="text-2xl">
         But, you may find other interesting articles on my blog
       </p>
-      <Link
-        href={siteConfig.path.home()}
-        className="bg-button px-2 py-1 rounded"
-      >
+      <Link href={pathKeys.home()} className="bg-button px-2 py-1 rounded">
         Back to Blog
       </Link>
     </div>

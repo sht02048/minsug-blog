@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 
+import pathKeys from "@/src/config/pathKeys";
 import siteConfig from "@/src/config/siteConfig";
 import PostCard from "@/src/components/Posts/PostCard";
 import PageTitle from "@/src/components/layouts/PageTitle";
@@ -14,7 +15,7 @@ export function generateMetadata({
 }: {
   params: Props;
 }): Metadata {
-  const url = `${siteConfig.url}${siteConfig.path.postByTags(tag)}`;
+  const url = `${siteConfig.url}${pathKeys.postByTags(tag)}`;
 
   return {
     title: tag,

@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { Metadata } from "next";
 
+import pathKeys from "@/src/config/pathKeys";
 import siteConfig from "@/src/config/siteConfig";
 
 import avatar from "../../../public/avatar.jpeg";
 
 export function generateMetaData(): Metadata {
   const pageTitle = "about";
-  const url = `${siteConfig.url}${siteConfig.path.about()}`;
+  const url = `${siteConfig.url}${pathKeys.about()}`;
   const imageUrl = "/avatar.jpeg";
 
   return {

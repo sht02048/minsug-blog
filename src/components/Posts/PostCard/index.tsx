@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import getSlug from "@/src/lib/getSlug";
-import siteConfig from "@/src/config/siteConfig";
+import pathKeys from "@/src/config/pathKeys";
 import { FrontMatter } from "@/src/config/types";
 
 import Tag from "../../Tags/Tag";
@@ -24,7 +24,7 @@ export default function PostCard({
     <div className="flex justify-between w-full items-center py-4 sm:py-6">
       <div className="space-y-6 sm:space-y-10">
         <Link
-          href={siteConfig.path.post({ year, month, englishTitle })}
+          href={pathKeys.post({ year, month, englishTitle })}
           className="sm:text-2xl text-xl"
         >
           {title}
@@ -41,7 +41,7 @@ export default function PostCard({
         </div>
       </div>
       <div className="w-80 h-44 bg-white sm:block hidden relative">
-        <Link href={siteConfig.path.post({ year, month, englishTitle })}>
+        <Link href={pathKeys.post({ year, month, englishTitle })}>
           <Image
             src={thumbnail}
             alt="thumbnail"
