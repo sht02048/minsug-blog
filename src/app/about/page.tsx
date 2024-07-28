@@ -1,5 +1,5 @@
 import Image from "next/image";
-import avatar from "../../../public/avatar.jpeg";
+import avatar from "../../../public/avatar.png";
 
 export default function Page() {
   return (

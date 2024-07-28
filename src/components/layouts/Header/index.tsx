@@ -14,14 +14,12 @@ export default function Header() {
       <Link href={pathKeys.home()} className="flex items-center cursor-pointer">
         <Image
           priority
-          width={40}
-          height={40}
+          width={60}
+          height={60}
           src={profile}
           alt="page owner's profile image"
         />
-        <div className="hidden sm:block ml-2 font-semibold">
-          {siteConfig.title}
-        </div>
+        <div className="ml-2 font-semibold text-xl">{siteConfig.title}</div>
       </Link>
       <div className="font-medium flex items-center space-x-5">
         <div className="hidden sm:block space-x-5">

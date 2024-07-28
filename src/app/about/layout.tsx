@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "about",
     url: `${siteConfig.url}${pathKeys.about()}`,
-    images: `${siteConfig.url}/avatar.jpeg`,
+    images: `${siteConfig.url}/avatar.png`,
     type: "profile",
   },
 };
