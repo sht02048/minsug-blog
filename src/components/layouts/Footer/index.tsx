@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="flex flex-col items-center mt-32">
       <Icon
         href={siteConfig.author.contacts.github}
-        className="hover:text-informative active:text-inherit"
+        className="hover:text-informative"
       >
         <FaGithub className="text-2xl" />
       </Icon>
