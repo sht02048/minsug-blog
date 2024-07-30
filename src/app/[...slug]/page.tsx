@@ -14,16 +14,16 @@ import PostHeader from "@/src/components/Posts/PostHeader";
 import SideTableOfContents from "@/src/components/features/SideTableOfContents";
 
 interface Props {
-  year: string;
   slug: string[];
 }
 
 export function generateMetadata({
-  params: { year, slug },
+  params: { slug },
 }: {
   params: Props;
 }): Metadata {
-  const post = findPostByYearAndSlug(year, slug);
+  const [year, month, postTitle] = slug;
+  const post = findPostByYearAndSlug({ year, month, title: postTitle });
 
   if (!post) {
     return {};
@@ -61,8 +61,10 @@ export function generateStaticParams() {
   });
 }
 
-export default function Page({ params: { year, slug } }: { params: Props }) {
-  const post = findPostByYearAndSlug(year, slug);
+export default function Page({ params: { slug } }: { params: Props }) {
+  const [year, month, title] = slug;
+
+  const post = findPostByYearAndSlug({ year, month, title });
 
   if (!post) {
     notFound();
