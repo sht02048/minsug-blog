@@ -7,10 +7,12 @@ import rehypePrettyCode from "rehype-pretty-code";
 
 import MdxImage from "../../mdx/Image";
 import MdxLink from "../../mdx/Link";
+import MdxBlockQuote from "../../mdx/BlockQuote";
 
 const mdxComponents: MDXComponents = {
   a: MdxLink as any,
   img: MdxImage as any,
+  blockquote: MdxBlockQuote,
 };
 
 export default function PostBody({ content }: { content: string }) {
