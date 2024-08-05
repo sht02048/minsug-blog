@@ -4,10 +4,10 @@ const pathKeys = {
     return this.root;
   },
   about() {
-    return this.root.concat("about/");
+    return this.root.concat("about");
   },
   tags() {
-    return this.root.concat("tags/");
+    return this.root.concat("tags");
   },
   post({
     year,
