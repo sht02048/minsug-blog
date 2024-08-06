@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 
 import getSlug from "./getSlug";
+import sortTags from "./sortTags";
 import { getAllPost } from "./post";
 
 import pathKeys from "../config/pathKeys";
@@ -9,7 +10,7 @@ import siteConfig from "../config/siteConfig";
 
 export default function getPostSitemap(): MetadataRoute.Sitemap {
   const allPosts = getAllPost();
-  const sitemapList = allPosts.map((post: PostInfo) => {
+  const postList = allPosts.map((post: PostInfo) => {
     const { frontMatter, slug } = post;
     const { date } = frontMatter;
     const { year, month, englishTitle } = getSlug({ date, slug });
@@ -20,6 +21,12 @@ export default function getPostSitemap(): MetadataRoute.Sitemap {
       lastModified: date,
     };
   });
+  const tagList = Object.keys(sortTags(allPosts)).map((tag) => {
+    return {
+      url: `${siteConfig.url}${pathKeys.postByTags(tag)}`,
+      lastModified: new Date(),
+    };
+  });
 
-  return sitemapList;
+  return [...postList, ...tagList];
 }
