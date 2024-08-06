@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     title: "tags",
     url: `${siteConfig.url}${pathKeys.tags()}`,
     publishedTime: new Date().toISOString(),
-    images: `${siteConfig.url}/profile.png`,
+    images: `${siteConfig.url}/qoo.png`,
   },
 };
 

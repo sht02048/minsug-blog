@@ -5,7 +5,7 @@ import pathKeys from "@/src/config/pathKeys";
 import siteConfig from "@/src/config/siteConfig";
 
 import Hamburger from "../../ui/Hamburger";
-import profile from "../../../../public/profile.png";
+import profile from "../../../../public/qoo.png";
 import ThemeSwitch from "../../features/ThemeSwitch";
 
 export default function Header() {

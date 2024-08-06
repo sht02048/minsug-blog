@@ -7,7 +7,7 @@ const siteConfig = {
   keyword: ["javascript", "typescript", "react", "nextJS", "frontEnd"],
   author: {
     name: "minsug",
-    photo: "/profile.png",
+    photo: "/qoo.png",
     bio: "frontend engineer",
     contacts: {
       email: "sht02048@gmail.com",

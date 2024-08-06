@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     },
     description: siteConfig.description,
     siteName: siteConfig.title,
-    images: `${siteConfig.url}/profile.png`,
+    images: `${siteConfig.url}/qoo.png`,
     type: "website",
   },
 };
