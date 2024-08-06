@@ -21,7 +21,7 @@ const pathKeys = {
     return this.root.concat(`${year}/${month}/${englishTitle}`);
   },
   postByTags(tag: string) {
-    return this.tags().concat(tag);
+    return this.tags().concat("/").concat(tag);
   },
 };
 
