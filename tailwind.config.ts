@@ -25,8 +25,11 @@ const config: Config = {
               scrollMarginTop: "5rem",
             },
             "h1": {
-              fontSize: "1.8rem",
+              fontSize: "1.5rem",
               marginTop: "2em"
+            },
+            "h2": {
+              fontSize: "1.35rem",
             },
             code: {
               counterReset: "line",
