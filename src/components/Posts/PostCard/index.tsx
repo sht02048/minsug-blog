@@ -25,7 +25,7 @@ export default function PostCard({
       <div className="space-y-6 sm:space-y-10">
         <Link
           href={pathKeys.post({ year, month, englishTitle })}
-          className="sm:text-2xl text-xl"
+          className="sm:text-2xl text-xl font-medium"
         >
           {title}
         </Link>

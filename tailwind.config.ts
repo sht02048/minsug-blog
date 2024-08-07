@@ -23,10 +23,10 @@ const config: Config = {
           css: {
             "h1, h2, h3": {
               scrollMarginTop: "5rem",
+              margin: "0"
             },
             "h1": {
               fontSize: "1.5rem",
-              marginTop: "2em"
             },
             "h2": {
               fontSize: "1.35rem",

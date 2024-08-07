@@ -1,19 +1,10 @@
 import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import remarkBreaks from "remark-breaks";
-import { MDXComponents } from "mdx/types";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 
-import MdxImage from "../../mdx/Image";
-import MdxLink from "../../mdx/Link";
-import MdxBlockQuote from "../../mdx/BlockQuote";
-
-const mdxComponents: MDXComponents = {
-  a: MdxLink as any,
-  img: MdxImage as any,
-  blockquote: MdxBlockQuote,
-};
+import mdxComponents from "../../mdx";
 
 export default function PostBody({ content }: { content: string }) {
   return (
