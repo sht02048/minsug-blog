@@ -1,20 +1,14 @@
 import { PostInfo, TagInfo } from "../config/types";
 
 export default function sortTags(posts: PostInfo[]): TagInfo {
-  const tagInfo: TagInfo = {};
+  const tagCounts = posts
+    .flatMap((post) => post.frontMatter.tags)
+    .reduce((acc, tag) => {
+      acc[tag] = (acc[tag] || 0) + 1;
+      return acc;
+    }, {} as TagInfo);
 
-  posts.forEach((post: PostInfo) => {
-    const tags = post.frontMatter.tags;
-
-    tags.forEach((tag: string) => {
-      if (tagInfo[tag]) {
-        tagInfo[tag] += 1;
-        return;
-      }
-
-      tagInfo[tag] = 1;
-    });
-  });
-
-  return tagInfo;
+  return Object.fromEntries(
+    Object.entries(tagCounts).sort(([, countA], [, countB]) => countB - countA),
+  );
 }
