@@ -5,9 +5,5 @@ export default function PublishedDate({ date }: { date: Date }) {
   const publishedDate = dayjs(date);
   const dayDifference = currentDate.diff(publishedDate, "day");
 
-  return (
-    <span>
-      {dayDifference === 0 ? "오늘" : publishedDate.format("YYYY년 M월 D일")}
-    </span>
-  );
+  return <span>{publishedDate.format("YYYY년 M월 D일")}</span>;
 }
